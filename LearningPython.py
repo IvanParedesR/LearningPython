@@ -1,3 +1,5 @@
+#remotes::install_github("rstudio/reticulate")
+library(reticulate)
 print(4)
 type('Hello, World!')
 print(1,000,000)
@@ -178,7 +180,7 @@ while n > -10:
   n = n - 1
   print('Blastoff!')
   
-  
+#no sé que hace
 while True:
   line = input('> ')
   if line[0] == '#':
@@ -187,3 +189,93 @@ if line == 'done':
     break
   print(line)
 print('Done!')
+
+
+friends = ['Joseph', 'Glenn', 'Sally']
+for friend in friends:
+  print('Happy New Year:', friend)
+print('Done!')
+
+
+for friend in friends:
+  print('Happy New Year:', friend)
+  
+count = 0
+for itervar in [3, 41, 12, 9, 74, 15]:
+  count = count + 1
+print('Contado: ', count)
+
+total = 0
+for itervar in [3, 4, 1, 1, 1, 1]:
+  total = total + itervar
+print('Total: ', total)
+
+
+largest = None
+print('Before:', largest)
+for itervar in [3, 41, 12, 9, 74, 15]:
+  if largest is None or itervar > largest :
+    largest = itervar
+  print('Loop:', itervar, largest)
+print('Largest:', largest)
+
+
+smallest = None
+print('Before:', smallest)
+for itervar in [3, 41, 12, 9, 74, 15]:
+  if smallest is None or itervar < smallest:
+    smallest = itervar
+  print('Loop:', itervar, smallest)
+print('Smallest:', smallest)
+
+def min(values):
+smallest = None
+for value in values:
+  if smallest is None or value < smallest:
+    smallest = value
+  return smallest
+  
+fruit = 'banana'
+letter = fruit[5]
+print(letter)
+len(fruit)
+
+length = len(fruit)
+last = fruit[length-1]
+print(last)
+
+### duda
+
+index = 0
+while index < len(fruit):
+  letter = fruit[index]
+  print(letter)
+  index = index + 1
+
+for char in fruit:
+  print(char)
+
+tot = 0 
+for i in [5, 4, 3, 2, 1] :
+    tot = tot + 1
+print(tot)
+
+zork = 0
+for thing in [9, 41, 12, 3, 74, 15] :
+    zork = zork + thing
+print('After', zork)
+
+smallest_so_far = -1
+for the_num in [9, 41, 12, 3, 74, 15] :
+   if the_num < smallest_so_far :
+      smallest_so_far = the_num
+print(smallest_so_far)
+
+if smallest is None :
+     smallest = value
+     
+n = 0
+while n > 0 :
+    print('Lather')
+    print('Rinse')
+print('Dry off!')
