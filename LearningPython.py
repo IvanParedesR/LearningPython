@@ -1,8 +1,14 @@
+#Para correr en R.
+# Basado en ejercicios y problemas de  Exploring Data Using Python 3. Dr. Charles R. Severance
+
 #remotes::install_github("rstudio/reticulate")
+# Se carga la libreria reticulate
 library(reticulate)
-print(4)
-type('Hello, World!')
+
+print(4) #imrpime el n√∫mero 4
+type('Hello, World!') #Da el tipo de dato
 print(1,000,000)
+
 message = 'And now for something completely different'
 n = 17
 print(n)
@@ -97,7 +103,7 @@ if 0 < x:
 
 x = 11    
 if 0 < x and x < 10:
-  print('x es un n˙mero positivo de un digito')
+  print('x es un n√∫mero positivo de un digito')
 else:
     print('x es mayor')
     
@@ -180,7 +186,7 @@ while n > -10:
   n = n - 1
   print('Blastoff!')
   
-#no sÈ que hace
+#no s√© que hace
 while True:
   line = input('> ')
   if line[0] == '#':
