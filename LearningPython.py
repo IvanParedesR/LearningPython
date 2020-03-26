@@ -1,18 +1,18 @@
-#Para correr en R.
-# Basado en ejercicios y problemas de  Exploring Data Using Python 3. Dr. Charles R. Severance
-
 #remotes::install_github("rstudio/reticulate")
-# Se carga la libreria reticulate
 library(reticulate)
-
-print(4) #imrpime el n√∫mero 4
-type('Hello, World!') #Da el tipo de dato
+print(4)
+type('Hello, World!')
 print(1,000,000)
-
 message = 'And now for something completely different'
 n = 17
 print(n)
 pi = 3.1415926535897931
+
+empty_list = list()
+also_empty_list = []
+zeros_list = [0] * 5
+print(zeros_list)
+
 
 print(1)
 x = 2
@@ -103,7 +103,7 @@ if 0 < x:
 
 x = 11    
 if 0 < x and x < 10:
-  print('x es un n√∫mero positivo de un digito')
+  print('x es un n˙mero positivo de un digito')
 else:
     print('x es mayor')
     
@@ -186,7 +186,7 @@ while n > -10:
   n = n - 1
   print('Blastoff!')
   
-#no s√© que hace
+#no sÈ que hace
 while True:
   line = input('> ')
   if line[0] == '#':
@@ -285,3 +285,129 @@ while n > 0 :
     print('Lather')
     print('Rinse')
 print('Dry off!')
+
+s = 'Monty Python'
+print(s[0:5])
+
+fruit = 'banana'
+fruit[:3]
+fruit[3:]
+
+#If the first index is greater than or equal to the second the result is an empty string, represented by two quotation marks:
+fruit = 'banana'
+fruit[3:3]
+fruit[1:4]
+
+greeting = 'Hello, world!'
+new_greeting = 'J' + greeting[5:11]
+print(new_greeting)
+
+word = 'banana'
+count = 0
+for letter in word:
+  if letter == 'a':
+    count = count + 1
+print(count)
+
+'a' in 'banana'
+
+if word == 'banana':
+  print('All right, bananas.')
+  
+word = "aineaple"
+if word < 'banana':
+  print('Your word, ' + word + ', comes before banana.')
+elif word > 'banana':
+  print('Your word, ' + word + ', comes after banana.')
+else:
+  print('All right, bananas.')
+
+stuff = 'Hello world'
+type(stuff)
+<class 'str'>
+dir(stuff)
+
+capitalize(...)
+  S.capitalize() -> str
+
+word = 'banana'
+new_word = word.upper()
+print(new_word)
+
+word = 'banana'
+index = word.find('a')
+print(index)
+
+word.find('na')
+
+
+n = 5
+while n > 0 :
+   print(n)
+print('All done')
+
+
+str1 = "Hello"
+str2 = 'there'
+bob = str1 + " " + str2
+print(bob)
+
+x = '40'
+y = int(x) + 2
+print(y)
+
+x = 'From marquard@uct.ac.za'
+print(len('banana')*7)
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+pos = data.find('.')
+print(data[pos:pos+3])
+
+#Exercise 1: Write a while loop that starts at the last character in the
+#string and works its way backwards to the first character in the string,
+#printing each letter on a separate line, except backwards.
+
+fruit = "banana"
+index = -5
+while index < 1:
+  letter = fruit[index]
+  print(letter)
+  index = index + 1
+
+#Exercise 3: Encapsulate this code in a function named count, and gen-
+#eralize it so that it accepts the string and the letter as arguments.
+# checar
+
+def countLetters(str, ch):
+	fruit = str
+	count = 0
+	for char in fruit:
+		if char == ch:
+			count = count + 1
+	print count
+	
+	countLetters('amigable', a)
+
+#### Checar
+def teste:
+  word = input('ingrese palabra:')
+  letra = input('ingrese letra:')
+  count = 0
+  for letter in word:
+    if letter == 'a':
+      count = count + 1
+  print(count)
+  
+def addtwo(a, b):
+  added = a + b
+  return added
+x = addtwo(3, 5)
+print(x)
+
+
+if word < 'banana':
+  print('Your word,' + word + ', comes before banana.')
+elif word > 'banana':
+  print('Your word,' + word + ', comes after banana.')
+else:
+  print('All right, bananas.')
