@@ -1,7 +1,9 @@
 #remotes::install_github("rstudio/reticulate")
+# Este script usa R para correr el código
 library(reticulate)
-print(4)
-type('Hello, World!')
+## Codigo por aprender
+print(4) # Devuelve lo que te escribas.
+type('Hello, World!') #Te dice si es string o número.
 print(1,000,000)
 message = 'And now for something completely different'
 n = 17
@@ -103,7 +105,7 @@ if 0 < x:
 
 x = 11    
 if 0 < x and x < 10:
-  print('x es un n�mero positivo de un digito')
+  print('x es un número positivo de un digito')
 else:
     print('x es mayor')
     
@@ -186,7 +188,7 @@ while n > -10:
   n = n - 1
   print('Blastoff!')
   
-#no s� que hace
+#no sé que hace
 while True:
   line = input('> ')
   if line[0] == '#':
