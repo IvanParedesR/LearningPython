@@ -52,16 +52,16 @@ print("Hello",name)
 
 x = 5
 y = 3
-x != y # x is not equal to y
-x > y # x is greater than y
-x < y # x is less than y
-x >= y # x is greater than or equal to y
+x != y # x es diferente de y
+x > y # x mayor que y
+x < y # x menor que y
+x >= y # x mayor o igual y
 x <= y # x is less than or equal to y
 x is y # x is the same as y
 x is not y # x is not the same as y
 
 if x > 0 :
-  print('x is positive')
+  print('x es positiva')
   
 x = 6
 if x < 10:
