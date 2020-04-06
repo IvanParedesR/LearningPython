@@ -1,20 +1,24 @@
 #remotes::install_github("rstudio/reticulate")
-# Este script usa R para correr el código
 library(reticulate)
-## Codigo por aprender
-print(4) # Devuelve lo que te escribas.
-type('Hello, World!') #Te dice si es string o número.
+# imprimir
+print(4)
 print(1,000,000)
+
+# Tipo de variable
+type('Hello, World!')
+type(5)
+type(7.65)
 message = 'And now for something completely different'
 n = 17
+
 print(n)
+
 pi = 3.1415926535897931
 
 empty_list = list()
 also_empty_list = []
 zeros_list = [0] * 5
 print(zeros_list)
-
 
 print(1)
 x = 2
@@ -34,7 +38,7 @@ print(first+second)
 
 indp = input()
 #comentarios
-name = input('What is your name?\n')
+name = input('What is your name?')
 print(name)
 
 a = 35.0
@@ -52,16 +56,16 @@ print("Hello",name)
 
 x = 5
 y = 3
-x != y # x es diferente de y
-x > y # x mayor que y
-x < y # x menor que y
-x >= y # x mayor o igual y
+x != y # x is not equal to y
+x > y # x is greater than y
+x < y # x is less than y
+x >= y # x is greater than or equal to y
 x <= y # x is less than or equal to y
 x is y # x is the same as y
 x is not y # x is not the same as y
 
 if x > 0 :
-  print('x es positiva')
+  print('x is positive')
   
 x = 6
 if x < 10:
@@ -105,7 +109,7 @@ if 0 < x:
 
 x = 11    
 if 0 < x and x < 10:
-  print('x es un número positivo de un digito')
+  print('x es un n�mero positivo de un digito')
 else:
     print('x es mayor')
     
@@ -188,7 +192,7 @@ while n > -10:
   n = n - 1
   print('Blastoff!')
   
-#no sé que hace
+#no s� que hace
 while True:
   line = input('> ')
   if line[0] == '#':
@@ -406,10 +410,127 @@ def addtwo(a, b):
 x = addtwo(3, 5)
 print(x)
 
-
+word = 'dios'
 if word < 'banana':
   print('Your word,' + word + ', comes before banana.')
 elif word > 'banana':
   print('Your word,' + word + ', comes after banana.')
 else:
   print('All right, bananas.')
+
+word = 'banana'
+new_word = word.upper()
+print(new_word)
+
+
+#6.5 Write code using find() and string slicing (see section 6.10) to extract the number at the end of the line below. Convert the extracted value to a floating point number and print it out.
+
+text = "X-DSPAM-Confidence:    0.8475";
+
+spacePos = text.find(" ")
+number = text[spacePos::1]
+number
+#not really necessary but since we are just learning and playing
+strippedNumber = number.lstrip();
+result = float(strippedNumber)
+
+def reprint(printed):
+    print(printed)  
+
+reprint(result)
+
+word.find('na')
+
+word.find('na', 3)
+
+line = ' Here we go      '
+line.strip()
+
+line = 'Have a nice day'
+line.startswith('Have')
+line.startswith('h')
+
+line.lower()
+'have a nice day'
+line.lower().startswith('h')
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+atpos = data.find('om')
+print(atpos)
+
+sppos = data.find(' ',atpos)
+print(sppos)
+
+host = data[atpos+1:sppos]
+print(host)
+
+camels = 42
+'%d' % camels
+
+'I have spotted %d camels.' % camels
+
+'In %d years I have spotted %g %s.' % (3, 0.1, 'camels')
+
+'%d %d %d' % (1, 2, 5)
+
+#While the file handle does not contain the data for the file, it is quite easy to
+#construct a for loop to read through and count each of the lines in a file:
+  
+fhand = open('C:/Users/iparedes/Documents/Clase/mbox.txt')
+x = 0
+for line in fhand:
+       x = x + 1
+print(x)
+#no sale
+inp = fhand.read()
+print(len(inp))
+print(inp[:20])
+
+#7.5 Searching through a file
+fhand = open('C:/Users/iparedes/Documents/Clase/mbox.txt')
+count = 0
+for line in fhand:
+  if line.startswith('From:'):
+    print(line)
+  
+for line in fhand:
+    line = line.rstrip()
+    # Skip 'uninteresting lines'
+    if not line.startswith('From:'):
+        continue
+    # Process our 'interesting' line
+    print(line)
+
+for line in fhand:
+    line = line.rstrip()
+    if line.find('@uct.ac.za') == -1: continue
+    print(line)
+
+
+fname = input('Enter the file name: ')
+fhand = open(fname)
+count = 0
+for line in fhand:
+  if line.startswith('Subject:'):
+    count = count + 1
+  print('There were', count, 'subject lines in', fname)
+  
+fname = input('Enter the file name: ')
+try:
+fhand = open(fname)
+except:
+print('File cannot be opened:', fname)
+exit()
+count = 0
+for line in fhand:
+  if line.startswith('Subject:'):
+    count = count + 1
+  print('There were', count, 'subject lines in', fname)
+
+# 7.1 Write a program that prompts for a file name, then opens that file and reads through the file, and print the contents of the file in upper case. Use the file words.txt to produce the output below.
+
+# Use words.txt as the file name
+fname = input("Enter file name: ")
+fh = open(fname)
+#Checar
+print(text.upper()) 
