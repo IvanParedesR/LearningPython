@@ -1,13 +1,18 @@
+# Se corre en RStudio, de ah√≠ que se use reticulate
 #remotes::install_github("rstudio/reticulate")
 library(reticulate)
 # imprimir
 print(4)
+# solo toma los 0
 print(1,000,000)
 
 # Tipo de variable
 type('Hello, World!')
+# String
 type(5)
+# number
 type(7.65)
+# float
 message = 'And now for something completely different'
 n = 17
 
@@ -17,6 +22,7 @@ pi = 3.1415926535897931
 
 empty_list = list()
 also_empty_list = []
+
 zeros_list = [0] * 5
 print(zeros_list)
 
@@ -109,7 +115,7 @@ if 0 < x:
 
 x = 11    
 if 0 < x and x < 10:
-  print('x es un n˙mero positivo de un digito')
+  print('x es un n√∫mero positivo de un digito')
 else:
     print('x es mayor')
     
@@ -192,7 +198,7 @@ while n > -10:
   n = n - 1
   print('Blastoff!')
   
-#no sÈ que hace
+#no s√© que hace
 while True:
   line = input('> ')
   if line[0] == '#':
