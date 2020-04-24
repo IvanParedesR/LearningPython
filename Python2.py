@@ -94,3 +94,16 @@ while (True):
 average = sum(numlist) / len(numlist)
 print('Average:', average)
 
+s = 'spam es una basura pero que podemos hacer'
+t = list(s)
+print(t)
+
+s = 'pining for the fjords'
+t = s.split()
+print(t)
+
+print(t[3])
+
+t = ['pining', 'for', 'the', 'fjords']
+delimiter = ' '
+delimiter.join(t)
