@@ -109,8 +109,8 @@ delimiter = ' '
 delimiter.join(t)
 
 import re
-hand = open('~LearningPython/mbox.txt')
+hand = open('mbox.txt')
 for line in hand:
     line = line.rstrip()
       if re.search('From:', line):
-        print(line)
+          print(line)
