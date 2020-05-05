@@ -129,8 +129,22 @@ for line in hand:
     if re.search('^F..m:', line):
         print(line)
         
-hand = open('mbox-short.txt')
+hand = open('mbox.txt')
 for line in hand:
     line = line.rstrip()
     if re.search('^From:.+@', line):
       print(line)
+
+import re
+s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+lst = re.findall('\S+@\S+', s)
+print(lst)
+
+# Search for lines that have an at sign between characters
+import re
+hand = open('mbox.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('\S+@\S+', line)
+    if len(x) > 0:
+        print(x)
