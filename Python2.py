@@ -107,3 +107,10 @@ print(t[3])
 t = ['pining', 'for', 'the', 'fjords']
 delimiter = ' '
 delimiter.join(t)
+
+import re
+hand = open('~LearningPython/mbox.txt')
+for line in hand:
+    line = line.rstrip()
+      if re.search('From:', line):
+        print(line)
