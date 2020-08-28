@@ -1,19 +1,26 @@
 # Se corre en RStudio, de ahí que se use reticulate
+
 #remotes::install_github("rstudio/reticulate")
 library(reticulate)
+
 # imprimir
 print(4)
+
 # solo toma los 0
 print(1,000,000)
 
 # Tipo de variable
 type('Hello, World!')
 # String
+
 type(5)
 # number
+
 type(7.65)
 # float
+
 message = 'And now for something completely different'
+
 n = 17
 
 print(n)
