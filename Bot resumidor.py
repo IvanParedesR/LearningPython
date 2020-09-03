@@ -1,8 +1,8 @@
 # Bot para resumir basado en el de Reddit https://github.com/PhantomInsights/summarizer
 
-"""
-This function tries to extract the article title, date and body from an HTML string.
-"""
+#"""
+# This function tries to extract the article title, date and body from an HTML string.
+#"""
 
 from datetime import datetime
 
