@@ -5,9 +5,14 @@ library(reticulate)
 
 # imprimir
 print(4)
+import pandas as pd
+import seaborn as sns
+import praw as pr
 
 # solo toma los 0
-print(1,000,000)
+print(1,010,000)
+
+#install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 # Tipo de variable
 type('Hello, World!')
@@ -19,7 +24,7 @@ type(5)
 type(7.65)
 # float
 
-message = 'And now for something completely different'
+message = 'Mensaje en el que puedes decir lo que quieras'
 
 n = 17
 
@@ -156,6 +161,10 @@ int(3.99999)
 float(32)
 
 import math
+import numpy
+import(axelrod)
+
+import praw
 print(math)
 
 ratio = signal_power / noise_power
